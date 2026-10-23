@@ -1,0 +1,20 @@
+{
+  "name": "theme-switcher",
+  "version": "0.1.0",
+  "description": "Framework-agnostic <theme-switcher> web component: light, dark, winter, spring, summer, fall.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./src/theme-switcher.js",
+  "exports": {
+    ".": "./src/theme-switcher.js",
+    "./themes.css": "./src/themes.css",
+    "./init": "./src/init.js",
+    "./init-snippet.html": "./src/init-snippet.html",
+    "./package.json": "./package.json"
+  },
+  "files": ["src", "README.md"],
+  "sideEffects": ["./src/theme-switcher.js", "./src/themes.css"],
+  "scripts": {
+    "demo": "python3 -m http.server 4338 --bind 127.0.0.1"
+  }
+}

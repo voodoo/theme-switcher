@@ -1,0 +1,14 @@
+<!-- theme-switcher no-flash init: paste first thing in <head>. Change data-storage-key to match <theme-switcher storage-key>. -->
+<script data-storage-key="theme-switcher:theme">
+  (function (s) {
+    var key = (s && s.getAttribute('data-storage-key')) || 'theme-switcher:theme';
+    var themes = ((s && s.getAttribute('data-themes')) || 'light dark winter spring summer fall').split(/[\s,]+/);
+    var t = null;
+    try { t = localStorage.getItem(key); } catch (e) {}
+    if (themes.indexOf(t) === -1) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      if (themes.indexOf(t) === -1) t = themes[0];
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })(document.currentScript);
+</script>
