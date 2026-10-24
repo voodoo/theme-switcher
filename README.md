@@ -13,9 +13,9 @@ A framework-agnostic, zero-dependency `<theme-switcher>` web component. One icon
 ## install
 
 ```sh
-npm install file:../theme-switcher
-# later, once the repo is published:
 npm install github:voodoo/theme-switcher
+# local sibling checkout:
+npm install file:../theme-switcher
 ```
 
 ## exports
